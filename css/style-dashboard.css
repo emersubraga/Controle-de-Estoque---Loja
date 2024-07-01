@@ -149,6 +149,28 @@ nav a:last-child:hover {
     padding: 20px;
 }
 
+.funcoes-produtos{
+    display: flex;
+    flex-direction: row;
+}
+
+.funcoes-produtos a{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: #5686B2;
+    color: #fff;
+    cursor: pointer;
+}
+
+.funcoes-produtos a:hover{
+    background-color: #0056b3;
+}
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -215,6 +237,31 @@ nav a:last-child:hover {
  
 h2 {
     margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #5686B2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
 }
 
 table {

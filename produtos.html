@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style-dashboard.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="white-bar">
+            <div class="dropdown">
+                <a class="dropbtn">Usuário<img src="img/icon-opções.png" alt=""></a>
+                <div class="dropdown-content">
+                    <a href="#sair">Sair</a>
+                </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <nav>
+            <div class="img-menu">
+                <img src="img/logo-loja.png" alt="">
+            </div>
+           
+            <ul>
+                <li><img src="img/icon-home.png"><a href="dashboard.html">Dashboard</a></li>
+                <li><img src="img/icon-entrada.png"><a href="entrada.html">Entrada</a></li>
+                <li><img src="img/icon-saida.png"><a href="saida.html">Saída</a></li>
+                <li><img src="img/icon-produtos.png"><a href="produtos.html">Produtos</a></li>
+                <li><img src="img/icon-fornecedores.png"><a href="fornecedores.html">Fornecedores</a></li>
+            </ul>
+        </nav>
+        
+        <div class="main-content">
+
+            <h1>Produtos</h1>
+
+           <div class="funcoes-produtos">
+
+                <a href="#">Cadastrar Produto</a>
+                <a href="#">Editar Produto</a>
+                <a href="#">Cadastrar Categoria</a>
+                <a href="#">Saldo</a>
+
+           </div>
+
+            <h2>Movimentações</h2>
+
+            <div class="search-bar">
+                <input type="text" id="buscaInput" placeholder="Procurar produto pelo nome...">
+                <button onclick="buscaProduto()">Buscar</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Valor de Custo</th>
+                        <th>Valor de Venda</th>
+                        <th>Quantidade em Estoque</th>
+                    </tr>
+                </thead>
+                <tbody id="produto">
+                    <tr>
+                        <td>1</td>
+                        <td>Cimento</td>
+                        <td>Saco de cimento Portland 50kg</td>
+                        <td>R$ 25,00</td>
+                        <td>R$ 35,00</td>
+                        <td>200</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Tijolo</td>
+                        <td>Tijolo de barro vermelho 6 furos</td>
+                        <td>R$ 0,80</td>
+                        <td>R$ 1,20</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Areia</td>
+                        <td>M3 de areia fina</td>
+                        <td>R$ 50,00</td>
+                        <td>R$ 75,00</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Cal</td>
+                        <td>Saco de cal hidratada 20kg</td>
+                        <td>R$ 12,00</td>
+                        <td>R$ 18,00</td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Brita</td>
+                        <td>M3 de brita 1</td>
+                        <td>R$ 70,00</td>
+                        <td>R$ 100,00</td>
+                        <td>80</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Vergalhão</td>
+                        <td>Vergalhão de aço CA-50 12mm</td>
+                        <td>R$ 18,00</td>
+                        <td>R$ 25,00</td>
+                        <td>300</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Bloco de Concreto</td>
+                        <td>Bloco de concreto 39x19x19cm</td>
+                        <td>R$ 4,00</td>
+                        <td>R$ 6,00</td>
+                        <td>4000</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Telha</td>
+                        <td>Telha cerâmica ondulada 2,44x1,10m</td>
+                        <td>R$ 20,00</td>
+                        <td>R$ 30,00</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Argamassa</td>
+                        <td>Saco de argamassa ACIII 20kg</td>
+                        <td>R$ 25,00</td>
+                        <td>R$ 38,00</td>
+                        <td>250</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Porta</td>
+                        <td>Porta de madeira 80x210cm</td>
+                        <td>R$ 150,00</td>
+                        <td>R$ 220,00</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>   
+    </div>
+
+    <script>
+        function buscaProduto() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("buscaInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("produto");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }       
+            }
+        }
+    </script>
+
+</body>
+</html>
