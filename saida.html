@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Saída de Estoque</title>
+    <script>
+        function addProduct() {
+            const container = document.getElementById('produtos');
+            const produtoInput = document.querySelector('input[name="produto[]"]');
+            const quantidadeInput = document.querySelector('input[name="quantidade[]"]');
+            const produto = produtoInput.value;
+            const quantidade = quantidadeInput.value;
+
+            if (produto && quantidade) {
+                const productItem = document.createElement('tr');
+                productItem.className = 'produtos-selecionados';
+
+                productItem.innerHTML = `
+                    <td>${produto}</td>
+                    <td>${quantidade}</td>
+                    <td><a type="button" class="remove-button" onclick="removeProduct(this)">Remover</a></td>
+                `;
+
+                container.appendChild(productItem);
+                produtoInput.value = '';
+                quantidadeInput.value = '';
+
+                document.getElementById('table-header').style.display = 'table-header-group';
+            }
+        }
+
+        function removeProduct(button) {
+            const row = button.parentElement.parentElement;
+            row.remove();
+
+            if (document.getElementById('produtos').children.length === 0) {
+                document.getElementById('table-header').style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="logo-loja">
+        <div class="img-titulo">
+            <img src="img/logo-loja.png" alt="Logo da loja.">
+            <h1>São Francisco</h1>
+        </div>
+        <div class="texto-subtitulo">
+            <h2>Materiais de Construção</h2>
+        </div>
+    </div>
+    <div class="componentes">
+        <h1>Formulário de Saída de Estoque</h1>
+        
+        <form action="/processa_saida" method="POST">
+            <div class="grid" id="grid">
+                <div class="input-completo">
+                    <label for="produto">Produto:</label>
+                    <input type="text" name="produto[]">
+                </div>
+                <div class="input-completo">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" name="quantidade[]">
+                </div>
+            </div>
+
+            <button type="button" onclick="addProduct()">Adicionar Produto</button>
+
+
+            <table>
+                <thead id="table-header" style="display: none;">
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="produtos">
+                    <!-- Produtos serão adicionados aqui -->
+                </tbody>
+            </table>
+            
+            <div class="input-registro">
+                <div class="componentes-input">
+                    <label for="data_saida">Data de Saída:</label>
+                    <input type="date" id="data_saida" name="data_saida" required>
+                </div>
+                
+                <div class="componentes-input">
+                    <label for="responsavel">Responsável:</label>
+                    <input type="text" id="responsavel" name="responsavel" required>
+                </div>
+            </div>
+            
+            <div class="input-observacoes">
+                <label for="observacoes">Observações:</label>
+                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Registrar Saída</button>
+
+        </form>
+    </div>
+</body>
+</html>
+
+
+<!-- <label for="produto">Produto:</label>
+                <input type="text" name="produto[]" required>
+                
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" name="quantidade[]" required>
+
+                <button type="button" class="remove-button" onclick="removeProduct(this)">Remover Produto</button> -->
