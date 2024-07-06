@@ -6,7 +6,7 @@
     <link rel="icon" href="img/logo-loja.png">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Cadastro de Usuário</title>
+    <title>Edição de Produto</title>
 </head>
 <body>
     <div class="logo-loja">
@@ -18,32 +18,39 @@
             <h2>Materiais de Construção</h2>
         </div>
     </div>
+
+
     <div class="componentes">
-        <h1>Cadastro de Usuário</h1>
+
+        <h1>Edição de Produto</h1>
         
         <div class="grid">
             <div class="input-completo">
                 <label for="nome">Nome:*</label>
                 <input type="text" name="nome" id="nome">
             </div>
-            <div class="input-completo">
-                <label for="email">E-mail:*</label>
-                <input type="email" name="email" id="nome">
-            </div>
         </div>
-        
+
         <div class="grid">
             <div class="input-completo">
-                <label for="cpf">CPF:*</label>
-                <input type="text" name="cpf" id="cpf">
+                <label for="cidade">Categoria:*</label>
+                <select name="estado">
+                    <option value="vazio">...</option>
+                    <option value="1">Categoria 1</option>
+                    <option value="2">Categoria 2</option>
+                    <option value="3">Categoria 3</option>
+                </select>  
             </div>
-            <div class="input-completo">
-                <label for="senha">Senha:*</label>
-                <input type="password" name="senha" id="senha">
+        </div>
+
+        <div class="grid">
+            <div class="input-textarea">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" rows="10" cols="63"></textarea>
             </div>
         </div>
         
-        <button type="submit">Salvar</button>
+        <button id="botao-salvar" type="submit">Salvar</button>
     </div>
     
 </body>

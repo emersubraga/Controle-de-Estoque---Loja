@@ -84,7 +84,7 @@ body {
 
 
 .componentes button {
-    margin: 30px 0px 0px 930px;
+    margin: 30px 0px 40px 930px;
     padding: 15px;
     border: none;
     border-radius: 4px;
@@ -95,6 +95,34 @@ body {
 
 
 .componentes button:hover {
+    background-color: #0056b3;
+}
+
+#botao-salvar{
+    margin: 20px 0px 40px 435px;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5686B2;
+    color: #fff;
+    cursor: pointer;
+}
+
+#botao-salvar:hover{
+    background-color: #0056b3;
+}
+
+#botao-adicionar{
+    margin: 20px 0px 40px 895px;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5686B2;
+    color: #fff;
+    cursor: pointer;
+}
+
+#botao-adicionar:hover{
     background-color: #0056b3;
 }
 
@@ -122,17 +150,17 @@ body {
     border-radius: 4px;
 }
 
-.input-observacoes{
+.input-textarea{
     display: flex;
     flex-direction: column;
 }
 
-.input-observacoes label{
+.input-textarea label{
     font-weight: 600;
     margin: 0px 10px 0px 10px;
 }
 
-.input-observacoes textarea{
+.input-textarea textarea{
     min-width: 450px;
     margin-bottom: 15px;
     margin: 10px;

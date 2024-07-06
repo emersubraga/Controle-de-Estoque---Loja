@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo-loja.png">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Cadastro de Categoria</title>
@@ -25,13 +26,15 @@
                 <label for="nome">Nome:*</label>
                 <input type="text" name="nome" id="nome">
             </div>
-            <div class="input-completo">
-                <label for="descricao">Descrição:*</label>
-                <input type="descricao" name="descricao" id="descricao">
+        </div>
+        <div class="grid">
+            <div class="input-textarea">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" rows="10" cols="63"></textarea>
             </div>
         </div>
         
-        <button type="submit">Salvar</button>
+        <button id="botao-salvar" type="submit">Salvar</button>
     </div>
     
 </body>

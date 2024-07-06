@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo-loja.png">
     <link rel="stylesheet" href="css/style.css">
-    <title>Saída de Estoque</title>
+    <title>Entrada de Estoque</title>
+
     <script>
         function addProduct() {
             const container = document.getElementById('produtos');
-            const produtoInput = document.querySelector('input[name="produto[]"]');
+            const produtoSelect = document.querySelector('select[name="produto[]"]');
             const quantidadeInput = document.querySelector('input[name="quantidade[]"]');
-            const produto = produtoInput.value;
+            const produto = produtoSelect.value;
             const quantidade = quantidadeInput.value;
 
-            if (produto && quantidade) {
+            if (produto !== 'vazio' && quantidade) {
                 const productItem = document.createElement('tr');
                 productItem.className = 'produtos-selecionados';
 
@@ -25,7 +26,7 @@
                 `;
 
                 container.appendChild(productItem);
-                produtoInput.value = '';
+                produtoSelect.value = 'vazio';
                 quantidadeInput.value = '';
 
                 document.getElementById('table-header').style.display = 'table-header-group';
@@ -53,13 +54,18 @@
         </div>
     </div>
     <div class="componentes">
-        <h1>Formulário de Saída de Estoque</h1>
+        <h1>Formulário de Entrada de Estoque</h1>
         
-        <form action="" method="POST">
+        <form action="#" method="POST">
             <div class="grid" id="grid">
                 <div class="input-completo">
                     <label for="produto">Produto:</label>
-                    <input type="text" name="produto[]">
+                    <select name="produto[]">
+                        <option value="vazio">...</option>
+                        <option value="Produto 1">Produto 1</option>
+                        <option value="Produto 2">Produto 2</option>
+                        <option value="Produto 3">Produto 3</option>
+                    </select>  
                 </div>
                 <div class="input-completo">
                     <label for="quantidade">Quantidade:</label>
@@ -68,7 +74,6 @@
             </div>
 
             <button id="botao-adicionar" type="button" onclick="addProduct()">Adicionar Produto</button>
-
 
             <table>
                 <thead id="table-header" style="display: none;">
@@ -85,13 +90,18 @@
             
             <div class="input-registro">
                 <div class="componentes-input">
-                    <label for="data_saida">Data de Saída:</label>
-                    <input type="date" id="data_saida" name="data_saida" required>
+                    <label for="data">Data de Entrada:</label>
+                    <input type="date" id="data" name="data" required>
                 </div>
                 
                 <div class="componentes-input">
-                    <label for="responsavel">Responsável:</label>
-                    <input type="text" id="responsavel" name="responsavel" required>
+                    <label for="nome">Fornecedor:</label>
+                    <select name="nome">
+                        <option value="vazio">...</option>
+                        <option value="Fornecedor 1">Fornecedor 1</option>
+                        <option value="Fornecedor 2">Fornecedor 2</option>
+                        <option value="Fornecedor 3">Fornecedor 3</option>
+                    </select>  
                 </div>
             </div>
             
@@ -100,7 +110,7 @@
                 <textarea id="observacoes" name="observacoes" rows="4"></textarea>
             </div>
 
-            <button type="submit">Registrar Saída</button>
+            <button type="submit">Registrar Entrada</button>
 
         </form>
     </div>
