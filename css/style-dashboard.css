@@ -149,12 +149,12 @@ nav a:last-child:hover {
     padding: 20px;
 }
 
-.funcoes-produtos{
+.funcoes{
     display: flex;
     flex-direction: row;
 }
 
-.funcoes-produtos a{
+.funcoes a{
     margin-top: 10px;
     margin-bottom: 5px;
     margin-right: 10px;
@@ -167,7 +167,7 @@ nav a:last-child:hover {
     cursor: pointer;
 }
 
-.funcoes-produtos a:hover{
+.funcoes a:hover{
     background-color: #0056b3;
 }
 
@@ -265,7 +265,7 @@ h2 {
     background-color: #0056b3;
 }
 
-table {
+.tabela {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
@@ -276,39 +276,199 @@ table {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-table:hover{
+.tabela:hover{
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-table thead{
+.tabela thead{
     border-bottom: 2px solid black;
 }
 
-table th, table td {
+.tabela th, .tabela td {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     padding: 15px;
     text-align: left;
 }
 
-table th {
+.tabela th {
     background-color: white;
     color: black;
 }
 
-table tbody tr:nth-child(even) {
+.tabela tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-table tbody tr:hover {
+.tabelatbody tr:hover {
     background-color: #ddd;
 }
 
-table a {
+.tabela a {
     color: #3498db;
     text-decoration: none;
 }
 
-table a:hover {
+.tabela a:hover {
     text-decoration: underline;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-content .celula-geral{
+    margin-top: 40px;
+    padding: 20px 10px 20px 10px;
+    border: 1px solid black;
+}
+
+.modal-content .logo-loja {
+    background-color: #5686B2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: -10px;
+    margin: 0px;
+}
+
+.modal-content .logo-loja .img-titulo{
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-content .logo-loja .img-titulo img {
+    width: 120px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.modal-content .logo-loja .img-titulo h1{
+    margin: 0px 30px;
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: -2px 1px 0px rgba(255, 255, 255, 1);
+    color: #9F454E;
+}
+
+.modal-content .texto-subtitulo h2{
+    margin: 40px 0px 0px -265px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-shadow: -3px 2px 0px rgba(160, 70, 79, 1);
+    color: #ffffff;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal .modal-content .cabecalho-informacoes-modal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.modal .modal-content .cabecalho-informacoes-modal .celula-cabecalho{
+    display: flex;
+    flex-direction: row;
+}
+
+.modal .modal-content .cabecalho-informacoes-modal .celula-cabecalho h4{
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.modal .modal-content .cabecalho-informacoes-modal .celula-cabecalho .sem-negrito{
+    font-weight: normal;
+}
+
+.modal .modal-content .tabela-modal{
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    background-color: white;
+    overflow: hidden;
+}
+
+.modal .modal-content .tabela-modal th, .tabela-modal td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.modal .modal-content .tabela-modal th {
+    background-color: white;
+    color: black;
+}
+
+.modal .modal-content .tabela-modal tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.modal .modal-content .tabela-modal tbody tr:hover {
+    background-color: #ddd;
+}
+
+.modal .modal-content .tabela-modal a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.modal .modal-content .tabela-modal a:hover {
+    text-decoration: underline;
+}
+
+.funcao-emitir{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.funcao-emitir a{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: #5686B2;
+    color: #fff;
+    cursor: pointer;
+}
+
+.funcao-emitir a:hover{
+    background-color: #0056b3;
 }

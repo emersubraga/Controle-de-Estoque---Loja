@@ -77,8 +77,8 @@
             </div>
 
             <h2>Movimentações</h2>
-    
-            <table>
+
+            <table class="tabela"> <!-- INICIO TABELA -->
                 <thead>
                     <tr>
                         <th>#</th>
@@ -93,75 +93,123 @@
                         <td>1</td>
                         <td>Entrada</td>
                         <td>17/06/2024</td>
-                        <td>R$ 4.560,00</td>
-                        <td><a href="#">Ver mais</a></td>
+                        <td>R$ 4.355,00</td>
+                        <td><a id="openModalBtn">Ver mais</a></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Saída</td>
                         <td>18/06/2024</td>
                         <td>R$ 1.200,00</td>
-                        <td><a href="#">Ver mais</a></td>
+                        <td><a id="openModalBtn">Ver mais</a></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Entrada</td>
                         <td>19/06/2024</td>
                         <td>R$ 3.000,00</td>
-                        <td><a href="#">Ver mais</a></td>
+                        <td><a id="openModalBtn">Ver mais</a></td>
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>Saída</td>
                         <td>20/06/2024</td>
                         <td>R$ 500,00</td>
-                        <td><a href="#">Ver mais</a></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Entrada</td>
-                        <td>21/06/2024</td>
-                        <td>R$ 2.750,00</td>
-                        <td><a href="#">Ver mais</a></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Saída</td>
-                        <td>22/06/2024</td>
-                        <td>R$ 800,00</td>
-                        <td><a href="#">Ver mais</a></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Entrada</td>
-                        <td>23/06/2024</td>
-                        <td>R$ 1.500,00</td>
-                        <td><a href="#">Ver mais</a></td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Saída</td>
-                        <td>24/06/2024</td>
-                        <td>R$ 1.100,00</td>
-                        <td><a href="#">Ver mais</a></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>Entrada</td>
-                        <td>25/06/2024</td>
-                        <td>R$ 3.300,00</td>
-                        <td><a href="#">Ver mais</a></td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Saída</td>
-                        <td>26/06/2024</td>
-                        <td>R$ 600,00</td>
-                        <td><a href="#">Ver mais</a></td>
-                    </tr>
+                        <td><a id="openModalBtn">Ver mais</a></td>
+                    </tr>   
                 </tbody>
-            </table>
+            </table> <!-- FIM TABELA -->
         </div>   
     </div>
+
+
+    <!-- INICIO - MODELO DE MODAL DE MOVIMENTAÇÃO DE ESTOQUE -->
+
+    <div id="myModal" class="modal"> <!-- INICIO MODAL DE DETALHES -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="celula-geral">
+                <div class="logo-loja">
+                    <div class="img-titulo">
+                        <img src="img/logo-loja.png" alt="Logo da loja.">
+                        <h1>São Francisco</h1>
+                    </div>
+                    <div class="texto-subtitulo">
+                        <h2>Materiais de Construção</h2>
+                    </div>
+                </div>
+                <h2>Registro de Entrada nº 1</h2> <!-- INICIO CABEÇALHO MODAL -->
+                <div class="cabecalho-informacoes-modal">
+                    <div class="celula-cabecalho">
+                        <h4>Responsavel:</h4>
+                        <h4  class="sem-negrito">Emerson Braga</h4>
+                    </div>
+                    <div class="celula-cabecalho">
+                        <h4>Fornecedor:</h4> <!-- SE FOSSE UMA SAIDA AQUI ESTARIA CLIENTE -->
+                        <h4  class="sem-negrito">Fornecedor 1</h4>
+                    </div>
+                    <div class="celula-cabecalho">
+                        <h4>Data:</h4>
+                        <h4  class="sem-negrito">17/06/2024</h4>
+                    </div>
+                    <div class="celula-cabecalho">
+                        <h4>Valor total:</h4>
+                        <h4 class="sem-negrito" id="valor-total">R$ 0,00</h4>
+                    </div>
+                </div> <!-- FIM CABEÇALHO MODAL -->
+    
+                <h3>Produtos</h3>
+    
+                <table class="tabela-modal">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Produto</th>
+                            <th>Unidade</th>
+                            <th>Quantidade</th>
+                            <th>Valor Unitário</th>
+                            <th>Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Produto A</td>
+                            <td>Unidade A</td>
+                            <td>10</td>
+                            <td>R$ 362,00</td>
+                            <td>R$ 3.620,00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Produto B</td>
+                            <td>Unidade B</td>
+                            <td>20</td>
+                            <td>R$ 18,00</td>
+                            <td>R$ 360,00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Produto C</td>
+                            <td>Unidade C</td>
+                            <td>15</td>
+                            <td>R$ 25,00</td>
+                            <td>R$ 375,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="funcao-emitir">
+                <a href="#">Emitir</a>  
+            </div>
+        </div>  
+    </div> <!-- FIM MODAL DE DETALHES -->
+
+    <!-- INICIO - MODELO DE MODAL DE MOVIMENTAÇÃO DE ESTOQUE -->
+    
+    
+    <script src="js/script.js"></script>    
+
 </body>
 </html>

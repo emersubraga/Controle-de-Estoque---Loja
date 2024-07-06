@@ -59,7 +59,12 @@
             <div class="grid" id="grid">
                 <div class="input-completo">
                     <label for="produto">Produto:</label>
-                    <input type="text" name="produto[]">
+                    <select name="produto[]">
+                        <option value="vazio">...</option>
+                        <option value="Produto 1">Produto 1</option>
+                        <option value="Produto 2">Produto 2</option>
+                        <option value="Produto 3">Produto 3</option>
+                    </select>  
                 </div>
                 <div class="input-completo">
                     <label for="quantidade">Quantidade:</label>
@@ -70,7 +75,7 @@
             <button id="botao-adicionar" type="button" onclick="addProduct()">Adicionar Produto</button>
 
 
-            <table>
+            <table class="tabela">
                 <thead id="table-header" style="display: none;">
                     <tr>
                         <th>Produto</th>
