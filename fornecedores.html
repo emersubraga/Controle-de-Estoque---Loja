@@ -14,9 +14,10 @@
             <div class="dropdown">
                 <a class="dropbtn">Usuário<img src="img/icon-opções.png" alt=""></a>
                 <div class="dropdown-content">
+                    <a href="cadastro-usuario.html">Cadastro de Usuário</a>
+                    <a href="editar-usuario.html">Editar Usuário</a>
                     <a href="login.html">Sair</a>
                 </div>
-        </div>
     </header>
     
     <div class="container">
@@ -31,6 +32,7 @@
                 <li><img src="img/icon-saida.png"><a href="saida.html">Saída</a></li>
                 <li><img src="img/icon-produtos.png"><a href="produtos.html">Produtos</a></li>
                 <li><img src="img/icon-fornecedores.png"><a href="fornecedores.html">Fornecedores</a></li>
+                <li><img src="img/icon-estoque.png"><a href="estoque.html">Estoque</a></li>
             </ul>
         </nav>
         
@@ -58,7 +60,7 @@
                         <th>Estado</th>
                         <th>Telefone</th>
                         <th>Email</th>
-                        <th>Editar</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody id="fornecedor">
@@ -69,7 +71,7 @@
                         <td>RN</td>
                         <td>(00) 00000-0000</td>
                         <td>email@empresa.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -78,7 +80,7 @@
                         <td>SP</td>
                         <td>(11) 11111-1111</td>
                         <td>contato@empresa2.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                     <tr>
                         <td>3</td>
@@ -87,7 +89,7 @@
                         <td>RJ</td>
                         <td>(22) 22222-2222</td>
                         <td>suporte@empresa3.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                     <tr>
                         <td>4</td>
@@ -96,7 +98,7 @@
                         <td>PR</td>
                         <td>(33) 33333-3333</td>
                         <td>vendas@empresa4.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                     <tr>
                         <td>5</td>
@@ -105,7 +107,7 @@
                         <td>BA</td>
                         <td>(44) 44444-4444</td>
                         <td>adm@empresa5.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                     <tr>
                         <td>6</td>
@@ -114,7 +116,7 @@
                         <td>RS</td>
                         <td>(55) 55555-5555</td>
                         <td>rh@empresa6.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                     <tr>
                         <td>7</td>
@@ -123,7 +125,7 @@
                         <td>SC</td>
                         <td>(66) 66666-6666</td>
                         <td>financeiro@empresa7.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                     <tr>
                         <td>8</td>
@@ -132,7 +134,7 @@
                         <td>MG</td>
                         <td>(77) 77777-7777</td>
                         <td>marketing@empresa8.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                     <tr>
                         <td>9</td>
@@ -141,7 +143,7 @@
                         <td>PE</td>
                         <td>(88) 88888-8888</td>
                         <td>comercial@empresa9.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                     <tr>
                         <td>10</td>
@@ -150,7 +152,7 @@
                         <td>CE</td>
                         <td>(99) 99999-9999</td>
                         <td>contato@empresa10.com</td>
-                        <td><a href="editar-fornecedor.html">Editar Fornecedor</a></td>
+                        <td><a href="editar-fornecedor.html">Editar</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -158,27 +160,7 @@
         </div>   
     </div>
 
-    <script>
-        function buscaFornecedor() {
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("buscaInput");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("fornecedor");
-            tr = table.getElementsByTagName("tr");
-
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[1];
-                if (td) {
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].style.display = "";
-                    } else {
-                        tr[i].style.display = "none";
-                    }
-                }       
-            }
-        }
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>

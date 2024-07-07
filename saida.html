@@ -6,41 +6,6 @@
     <link rel="icon" href="img/logo-loja.png">
     <link rel="stylesheet" href="css/style.css">
     <title>Saída de Estoque</title>
-    <script>
-        function addProduct() {
-            const container = document.getElementById('produtos');
-            const produtoInput = document.querySelector('input[name="produto[]"]');
-            const quantidadeInput = document.querySelector('input[name="quantidade[]"]');
-            const produto = produtoInput.value;
-            const quantidade = quantidadeInput.value;
-
-            if (produto && quantidade) {
-                const productItem = document.createElement('tr');
-                productItem.className = 'produtos-selecionados';
-
-                productItem.innerHTML = `
-                    <td>${produto}</td>
-                    <td>${quantidade}</td>
-                    <td><a type="button" class="remove-button" onclick="removeProduct(this)">Remover</a></td>
-                `;
-
-                container.appendChild(productItem);
-                produtoInput.value = '';
-                quantidadeInput.value = '';
-
-                document.getElementById('table-header').style.display = 'table-header-group';
-            }
-        }
-
-        function removeProduct(button) {
-            const row = button.parentElement.parentElement;
-            row.remove();
-
-            if (document.getElementById('produtos').children.length === 0) {
-                document.getElementById('table-header').style.display = 'none';
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="logo-loja">
@@ -109,5 +74,7 @@
 
         </form>
     </div>
+
+    <script src="js/script.js"></script> 
 </body>
 </html>
