@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo-loja.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/dash.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="username"><a class="dropbtn">Usuário<img src="img/icon-opções.png" alt=""></a></div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="menu-toggle" onclick="toggleSidebar()"></div>
+            <div class="img-menu">
+                <img src="img/logo-loja.png" alt="">
+            </div>
+            
+            <ul>
+                <li><img src="img/icon-home.png"><a href="dashboard.html">Dashboard</a></li>
+                <li><img src="img/icon-entrada.png"><a href="entrada.html">Entrada</a></li>
+                <li><img src="img/icon-saida.png"><a href="saida.html">Saída</a></li>
+                <li><img src="img/icon-produtos.png"><a href="produtos.html">Produtos</a></li>
+                <li><img src="img/icon-fornecedores.png"><a href="fornecedores.html">Fornecedores</a></li>
+                <li><img src="img/icon-estoque.png"><a href="estoque.html">Estoque</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+                <div class="card" id="card-vendas">
+                    <h3>Vendas/Mês</h3>
+                    <div class="dados-card">
+                        <h1>R$ 35.678,90</h1>
+                        <img src="img/icon-vendas.png" alt="">
+                    </div>
+                </div>
+                <div class="card" id="card-lucros">
+                    <h3>Lucros/Mês</h3>
+                    <div class="dados-card">
+                        <h1>R$ 22.560,47</h1>
+                        <img src="img/icon-lucro.png" alt="">
+                    </div>
+                </div>
+                <div class="card" id="card-entradas">
+                    <h3>Entradas/Mês</h3>
+                    <div class="dados-card">
+                        <h1>18 Compras</h1>
+                        <img src="img/icon-entrada.png" alt="">
+                    </div>
+                </div>
+                <div class="card" id="card-saidas">
+                    <h3>Saídas/Mês</h3>
+                    <div class="dados-card">
+                        <h1>12 Vendas</h1>
+                        <img src="img/icon-saida.png" alt="">
+                    </div>
+                </div>
+                <div class="card" id="card-produtos">
+                    <h3>Produtos</h3>
+                    <div class="dados-card">
+                        <h1>53</h1>
+                        <img src="img/icon-produtos.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <h2>Movimentações</h2>
+
+            <table class="tabela"> <!-- INICIO TABELA -->
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Tipo</th>
+                        <th>Data</th>
+                        <th>Valor</th>
+                        <th>Detalhes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Entrada</td>
+                        <td>17/06/2024</td>
+                        <td>R$ 4.355,00</td>
+                        <td><a id="openModalBtn">Ver mais</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Saída</td>
+                        <td>18/06/2024</td>
+                        <td>R$ 1.200,00</td>
+                        <td><a id="openModalBtn">Ver mais</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Entrada</td>
+                        <td>19/06/2024</td>
+                        <td>R$ 3.000,00</td>
+                        <td><a id="openModalBtn">Ver mais</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Saída</td>
+                        <td>20/06/2024</td>
+                        <td>R$ 500,00</td>
+                        <td><a id="openModalBtn">Ver mais</a></td>
+                    </tr>   
+                </tbody>
+            </table> <!-- FIM TABELA -->
+
+            <div id="myModal" class="modal"> <!-- INICIO MODAL DE DETALHES -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="celula-geral">
+                        <div class="logo-loja">
+                            <div class="img-titulo">
+                                <img src="img/logo-loja.png" alt="Logo da loja.">
+                                <h1>São Francisco</h1>
+                            </div>
+                            <div class="texto-subtitulo">
+                                <h2>Materiais de Construção</h2>
+                            </div>
+                        </div>
+                        <h2>Registro de Entrada nº 1</h2> <!-- INICIO CABEÇALHO MODAL -->
+                        <div class="cabecalho-informacoes-modal">
+                            <div class="celula-cabecalho">
+                                <h4>Responsavel:</h4>
+                                <h4  class="sem-negrito">Emerson Braga</h4>
+                            </div>
+                            <div class="celula-cabecalho">
+                                <h4>Fornecedor:</h4> <!-- SE FOSSE UMA SAIDA AQUI ESTARIA CLIENTE -->
+                                <h4  class="sem-negrito">Fornecedor 1</h4>
+                            </div>
+                            <div class="celula-cabecalho">
+                                <h4>Data:</h4>
+                                <h4  class="sem-negrito">17/06/2024</h4>
+                            </div>
+                            <div class="celula-cabecalho">
+                                <h4>Valor total:</h4>
+                                <h4 class="sem-negrito" id="valor-total">R$ 0,00</h4>
+                            </div>
+                        </div> <!-- FIM CABEÇALHO MODAL -->
+            
+                        <h3>Produtos</h3>
+            
+                        <table class="tabela-modal">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Produto</th>
+                                    <th>Unidade</th>
+                                    <th>Quantidade</th>
+                                    <th>Valor Unitário</th>
+                                    <th>Valor Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Produto A</td>
+                                    <td>Unidade A</td>
+                                    <td>10</td>
+                                    <td>R$ 362,00</td>
+                                    <td>R$ 3.620,00</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Produto B</td>
+                                    <td>Unidade B</td>
+                                    <td>20</td>
+                                    <td>R$ 18,00</td>
+                                    <td>R$ 360,00</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Produto C</td>
+                                    <td>Unidade C</td>
+                                    <td>15</td>
+                                    <td>R$ 25,00</td>
+                                    <td>R$ 375,00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="funcao-emitir">
+                        <a href="#">Emitir</a>  
+                    </div>
+                </div>  
+            </div> <!-- FIM MODAL DE DETALHES -->
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

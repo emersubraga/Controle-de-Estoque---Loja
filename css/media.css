@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+    }
+    .content {
+        margin-left: 0;
+    }
+    .sidebar.open {
+        width: 250px;
+    }
+    .content.open {
+        margin-left: 250px;
+    }
+}
