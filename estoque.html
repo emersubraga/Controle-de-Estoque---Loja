@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo-loja.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/style-dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <title>Estoque</title>
 </head>
 <body>
-    <header class="top-bar">
-        <div class="white-bar">
-            <div class="dropdown">
+    <div class="container">
+        <div class="topbar">
+            <div class="menu-toggle" onclick="toggleSidebar()">&#9776;</div>
+            <div class="username">
                 <a class="dropbtn">Usuário<img src="img/icon-opções.png" alt=""></a>
                 <div class="dropdown-content">
-                    <a href="cadastro-usuario.html">Cadastro de Usuário</a>
+                    <a href="cadastro-usuario.html">Cadastrar Usuário</a>
                     <a href="editar-usuario.html">Editar Usuário</a>
                     <a href="login.html">Sair</a>
                 </div>
+            </div>
         </div>
-    </header>
-    
-    <div class="container">
-        <nav>
+        <div class="sidebar" id="sidebar">
+            <div class="menu-toggle" onclick="toggleSidebar()">&#9776;</div>
             <div class="img-menu">
                 <img src="img/logo-loja.png" alt="">
             </div>
-           
+            
             <ul>
                 <li><img src="img/icon-home.png"><a href="dashboard.html">Dashboard</a></li>
                 <li><img src="img/icon-entrada.png"><a href="entrada.html">Entrada</a></li>
@@ -35,9 +35,8 @@
                 <li><img src="img/icon-fornecedores.png"><a href="fornecedores.html">Fornecedores</a></li>
                 <li><img src="img/icon-estoque.png"><a href="estoque.html">Estoque</a></li>
             </ul>
-        </nav>
-        
-        <div class="main-content">
+        </div>
+        <div class="content">
 
             <h1>Estoque</h1>
 
@@ -63,7 +62,7 @@
                 </thead>
                 <tbody id="produto">
                     <tr>
-                        <td>1</td>
+                        <td id="negrito">1</td>
                         <td>Cimento</td>
                         <td>Und</td>
                         <td>200</td>
@@ -71,7 +70,7 @@
                         <td>R$ 5.000,00</td>
                     </tr>
                     <tr>
-                        <td>2</td>
+                        <td id="negrito">2</td>
                         <td>Tijolo</td>
                         <td>Milheiro</td>
                         <td>8</td>
@@ -79,7 +78,7 @@
                         <td>R$ 3.600,00</td>
                     </tr>
                     <tr>
-                        <td>3</td>
+                        <td id="negrito">3</td>
                         <td>Areia</td>
                         <td>M³</td>
                         <td>50</td>
@@ -87,7 +86,7 @@
                         <td>R$ 3.500,00</td>
                     </tr>
                     <tr>
-                        <td>4</td>
+                        <td id="negrito">4</td>
                         <td>Cal</td>
                         <td>Und</td>
                         <td>150</td>
@@ -95,7 +94,7 @@
                         <td>R$ 1.800,00</td>
                     </tr>
                     <tr>
-                        <td>5</td>
+                        <td id="negrito">5</td>
                         <td>Brita</td>
                         <td>M³</td>
                         <td>10</td>
@@ -103,7 +102,7 @@
                         <td>R$ 900,00</td>
                     </tr>
                     <tr>
-                        <td>6</td>
+                        <td id="negrito">6</td>
                         <td>Vergalhão</td>
                         <td>Und</td>
                         <td>300</td>
@@ -112,7 +111,6 @@
                     </tr>
                 </tbody>
             </table>
-            
         </div>   
     </div>
 

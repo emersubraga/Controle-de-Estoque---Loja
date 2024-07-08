@@ -12,6 +12,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .logo-loja {
     background-color: #5686B2;
     display: flex;
@@ -61,6 +67,7 @@ body {
 .componentes .grid{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .componentes .grid .input-completo{
@@ -169,6 +176,10 @@ body {
     border-radius: 4px;
 }
 
+#descricao {
+    min-width: 500px;
+}
+
 table {
     width: 100%;
     margin-top: 20px;
@@ -210,4 +221,124 @@ table a {
 
 table a:hover {
     text-decoration: underline;
+}
+
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .componentes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+    
+    .componentes h1{
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    .componentes .grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .componentes .grid .input-completo label{
+        font-weight: bold;
+        margin: 10px 10px 0px 20px;
+    }
+    
+    .componentes .grid .input-completo input, select{
+        min-width: 450px;
+        margin-bottom: 15px;
+        margin: 10px;
+    }
+
+    
+    .componentes button {
+        margin: 5px 15px 50px 15px;
+        padding: 10px;
+    }
+
+    
+    #botao-salvar{
+        margin: 5px 15px 0px 15px;
+        padding: 10px;
+    }
+
+    #botao-salvar:hover{
+        background-color: #0056b3;
+    }
+
+    #botao-adicionar{
+        margin: 5px 15px 0px 15px;
+        padding: 10px;
+    }
+
+    #botao-adicionar:hover{
+        background-color: #0056b3;
+    }
+
+    .input-registro{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input-registro .componentes-input{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .input-registro .componentes-input label{
+        font-weight: bold;
+        margin: 0px 15px 0px 15px;
+    }
+    
+    .input-registro .componentes-input input{
+        min-width: 450px;
+        margin-bottom: 15px;
+        margin: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    .input-textarea{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .input-textarea label{
+        font-weight: 600;
+        margin: 0px 15px 0px 15px;
+    }
+    
+    #descricao {
+        min-width: 450px;
+    }
+
+    .input-textarea textarea{
+        min-width: 450px;
+        margin: 10px 15px 15px 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    table {
+        width: 100%;
+    }
+    
+    table th, table td {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
 }

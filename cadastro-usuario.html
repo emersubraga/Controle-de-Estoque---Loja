@@ -9,45 +9,49 @@
     <title>Cadastro de Usuário</title>
 </head>
 <body>
-    <div class="logo-loja">
-        <div class="img-titulo">
-            <img src="img/logo-loja.png" alt="Logo da loja.">
-            <h1>São Francisco</h1>
-        </div>
-        <div class="texto-subtitulo">
-            <h2>Materiais de Construção</h2>
-        </div>
-    </div>
-    <div class="componentes">
-        <h1>Cadastro de Usuário</h1>
-        
-        <div class="grid">
-            <div class="input-completo">
-                <label for="nome">Nome:*</label>
-                <input type="text" name="nome" id="nome">
+    <div class="container">
+        <div class="logo-loja">
+            <div class="img-titulo">
+                <img src="img/logo-loja.png" alt="Logo da loja.">
+                <h1>São Francisco</h1>
+            </div>
+            <div class="texto-subtitulo">
+                <h2>Materiais de Construção</h2>
             </div>
         </div>
-        <div class="grid">
-            <div class="input-completo">
-                <label for="email">E-mail:*</label>
-                <input type="email" name="email" id="nome">
+        <div class="componentes">
+            <h1>Cadastro de Usuário</h1>
+
+            <form action="">
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="nome">Nome:*</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="email">E-mail:*</label>
+                        <input type="email" name="email" id="nome">
+                    </div>
+                </div>
+                
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="cpf">CPF:*</label>
+                        <input type="text" name="cpf" id="cpf">
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="senha">Senha:*</label>
+                        <input type="password" name="senha" id="senha">
+                    </div>
+                </div>
+                
+                <button id="botao-salvar" type="submit">Salvar</button>
             </div>
-        </div>
-        
-        <div class="grid">
-            <div class="input-completo">
-                <label for="cpf">CPF:*</label>
-                <input type="text" name="cpf" id="cpf">
-            </div>
-        </div>
-        <div class="grid">
-            <div class="input-completo">
-                <label for="senha">Senha:*</label>
-                <input type="password" name="senha" id="senha">
-            </div>
-        </div>
-        
-        <button id="botao-salvar" type="submit">Salvar</button>
+            </form>
     </div>
     
 </body>

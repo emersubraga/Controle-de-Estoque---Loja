@@ -9,103 +9,108 @@
     <title>Editar de Fornecedor</title>
 </head>
 <body>
-    <div class="logo-loja">
-        <div class="img-titulo">
-            <img src="img/logo-loja.png" alt="Logo da loja.">
-            <h1>São Francisco</h1>
+
+    <div class="container">
+        <div class="logo-loja">
+            <div class="img-titulo">
+                <img src="img/logo-loja.png" alt="Logo da loja.">
+                <h1>São Francisco</h1>
+            </div>
+            <div class="texto-subtitulo">
+                <h2>Materiais de Construção</h2>
+            </div>
         </div>
-        <div class="texto-subtitulo">
-            <h2>Materiais de Construção</h2>
-        </div>
-    </div>
+    
+    
+        <div class="componentes">
+    
+            <h1>Editar de Fornecedor</h1>
 
-
-    <div class="componentes">
-
-        <h1>Editar de Fornecedor</h1>
+            <form action="">
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="nome">Razão Social:*</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="cnpj">CNPJ:*</label>
+                        <input type="text" name="cnpj" id="cnpj">
+                    </div>
+                </div>
+                
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="logradouro">Logradouro:*</label>
+                        <input type="text" name="logradouro" id="logradouro">
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="bairro">Bairro:*</label>
+                        <input type="text" name="bairro" id="bairro">
+                    </div>
+                </div>
         
-        <div class="grid">
-            <div class="input-completo">
-                <label for="nome">Razão Social:*</label>
-                <input type="text" name="nome" id="nome">
-            </div>
-        </div>
-        <div class="grid">
-            <div class="input-completo">
-                <label for="cnpj">CNPJ:*</label>
-                <input type="text" name="cnpj" id="cnpj">
-            </div>
-        </div>
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="cidade">Cidade:*</label>
+                        <input type="text" name="cidade" id="cidade">
+                    </div>
+                </div>
+                <div class="grid">    
+                    <div class="input-completo">
+                        <label for="cidade">Estado:*</label>
+                        <select name="estado">
+                            <option value="vazio">...</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>  
+                    </div>
+                </div>
         
-        <div class="grid">
-            <div class="input-completo">
-                <label for="logradouro">Logradouro:*</label>
-                <input type="text" name="logradouro" id="logradouro">
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="email">E-mail:*</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="telefone">Telefone:*</label>
+                        <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(XX) XXXXX-XXXX">
+                    </div>
+                </div>
+                
+                <button id="botao-salvar" type="submit">Salvar</button>
             </div>
-        </div>
-        <div class="grid">
-            <div class="input-completo">
-                <label for="bairro">Bairro:*</label>
-                <input type="text" name="bairro" id="bairro">
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="input-completo">
-                <label for="cidade">Cidade:*</label>
-                <input type="text" name="cidade" id="cidade">
-            </div>
-        </div>
-        <div class="grid">    
-            <div class="input-completo">
-                <label for="cidade">Estado:*</label>
-                <select name="estado">
-                    <option value="vazio">...</option>
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                </select>  
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="input-completo">
-                <label for="email">E-mail:*</label>
-                <input type="email" name="email" id="email">
-            </div>
-        </div>
-        <div class="grid">
-            <div class="input-completo">
-                <label for="telefone">Telefone:*</label>
-                <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(XX) XXXXX-XXXX">
-            </div>
-        </div>
-        
-        <button id="botao-salvar" type="submit">Salvar</button>
+            </form>
     </div>
     
 </body>

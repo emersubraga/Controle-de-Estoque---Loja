@@ -83,6 +83,7 @@ body {
 .card-form-login form {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     font-size: 20px;
 }
 
@@ -108,4 +109,89 @@ body {
 
 .card-form-login button:hover {
     background-color: #0056b3;
+}
+
+
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .coluna-70 {
+        width: 100%;
+        background-color: #5686B2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .coluna-30 {
+        width: 100%;
+    }
+    
+    .logo-loja {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .logo-loja .img-titulo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0px 15px 0px 15px;
+    }
+    
+    .logo-loja .img-titulo img {
+        margin: 5px 25px 5px 20px;
+        width: 30%;
+        height: 30%;
+    }
+    
+    .logo-loja .img-titulo h1{
+        margin: 30px 15px 5px 0px;
+        font-size: 40px;
+    }
+    
+    .texto-subtitulo h2{
+        margin: -70px 0px 0px 110px;
+        font-size: 20px;
+    }
+    
+    .card-form-login {
+        background-color: #ffffff;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    .card-form-login .texto-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+    
+    .card-form-login .texto-form h1{
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-size: 30px;
+    }
+
+    .card-form-login form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 }

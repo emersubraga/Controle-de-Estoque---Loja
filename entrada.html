@@ -8,75 +8,77 @@
     <title>Entrada de Estoque</title>
 </head>
 <body>
-    <div class="logo-loja">
-        <div class="img-titulo">
-            <img src="img/logo-loja.png" alt="Logo da loja.">
-            <h1>São Francisco</h1>
-        </div>
-        <div class="texto-subtitulo">
-            <h2>Materiais de Construção</h2>
-        </div>
-    </div>
-    <div class="componentes">
-        <h1>Formulário de Entrada de Estoque</h1>
-        
-        <form action="#" method="POST">
-            <div class="grid" id="grid">
-                <div class="input-completo">
-                    <label for="produto">Produto:</label>
-                    <select name="produto[]">
-                        <option value="vazio">...</option>
-                        <option value="Produto 1">Produto 1</option>
-                        <option value="Produto 2">Produto 2</option>
-                        <option value="Produto 3">Produto 3</option>
-                    </select>  
-                </div>
-                <div class="input-completo">
-                    <label for="quantidade">Quantidade:</label>
-                    <input type="number" name="quantidade[]">
-                </div>
+    <div class="container">
+        <div class="logo-loja">
+            <div class="img-titulo">
+                <img src="img/logo-loja.png" alt="Logo da loja.">
+                <h1>São Francisco</h1>
             </div>
-
-            <button id="botao-adicionar" type="button" onclick="addProduct()">Adicionar Produto</button>
-
-            <table class="tabela">
-                <thead id="table-header" style="display: none;">
-                    <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody id="produtos">
-                    <!-- Produtos serão adicionados aqui -->
-                </tbody>
-            </table>
+            <div class="texto-subtitulo">
+                <h2>Materiais de Construção</h2>
+            </div>
+        </div>
+        <div class="componentes">
+            <h1>Formulário de Entrada de Estoque</h1>
             
-            <div class="input-registro">
-                <div class="componentes-input">
-                    <label for="data">Data de Entrada:</label>
-                    <input type="date" id="data" name="data" required>
+            <form action="#" method="POST">
+                <div class="grid" id="grid">
+                    <div class="input-completo">
+                        <label for="produto">Produto:</label>
+                        <select name="produto[]">
+                            <option value="vazio">...</option>
+                            <option value="Produto 1">Produto 1</option>
+                            <option value="Produto 2">Produto 2</option>
+                            <option value="Produto 3">Produto 3</option>
+                        </select>  
+                    </div>
+                    <div class="input-completo">
+                        <label for="quantidade">Quantidade:</label>
+                        <input type="number" name="quantidade[]">
+                    </div>
+                </div>
+    
+                <button id="botao-adicionar" type="button" onclick="addProduct()">Adicionar Produto</button>
+    
+                <table class="tabela">
+                    <thead id="table-header" style="display: none;">
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="produtos">
+                        <!-- Produtos serão adicionados aqui -->
+                    </tbody>
+                </table>
+                
+                <div class="input-registro">
+                    <div class="componentes-input">
+                        <label for="data">Data de Entrada:</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    
+                    <div class="componentes-input">
+                        <label for="nome">Fornecedor:</label>
+                        <select name="nome">
+                            <option value="vazio">...</option>
+                            <option value="Fornecedor 1">Fornecedor 1</option>
+                            <option value="Fornecedor 2">Fornecedor 2</option>
+                            <option value="Fornecedor 3">Fornecedor 3</option>
+                        </select>  
+                    </div>
                 </div>
                 
-                <div class="componentes-input">
-                    <label for="nome">Fornecedor:</label>
-                    <select name="nome">
-                        <option value="vazio">...</option>
-                        <option value="Fornecedor 1">Fornecedor 1</option>
-                        <option value="Fornecedor 2">Fornecedor 2</option>
-                        <option value="Fornecedor 3">Fornecedor 3</option>
-                    </select>  
+                <div class="input-textarea">
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes" name="observacoes" rows="4"></textarea>
                 </div>
-            </div>
-            
-            <div class="input-textarea">
-                <label for="observacoes">Observações:</label>
-                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
-            </div>
-
-            <button type="submit">Registrar Entrada</button>
-
-        </form>
+    
+                <button type="submit">Registrar Entrada</button>
+    
+            </form>
+        </div>
     </div>
 
     <script src="js/script.js"></script>

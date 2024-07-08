@@ -9,48 +9,59 @@
     <title>Edição de Produto</title>
 </head>
 <body>
-    <div class="logo-loja">
-        <div class="img-titulo">
-            <img src="img/logo-loja.png" alt="Logo da loja.">
-            <h1>São Francisco</h1>
+    <div class="container">
+        <div class="logo-loja">
+            <div class="img-titulo">
+                <img src="img/logo-loja.png" alt="Logo da loja.">
+                <h1>São Francisco</h1>
+            </div>
+            <div class="texto-subtitulo">
+                <h2>Materiais de Construção</h2>
+            </div>
         </div>
-        <div class="texto-subtitulo">
-            <h2>Materiais de Construção</h2>
-        </div>
-    </div>
-
-
-    <div class="componentes">
-
-        <h1>Edição de Produto</h1>
+    
+    
+        <div class="componentes">
+    
+            <h1>Editar Produto</h1>
+            <form action="">
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="nome">Nome:*</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                </div>
         
-        <div class="grid">
-            <div class="input-completo">
-                <label for="nome">Nome:*</label>
-                <input type="text" name="nome" id="nome">
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="input-completo">
-                <label for="cidade">Categoria:*</label>
-                <select name="estado">
-                    <option value="vazio">...</option>
-                    <option value="1">Categoria 1</option>
-                    <option value="2">Categoria 2</option>
-                    <option value="3">Categoria 3</option>
-                </select>  
-            </div>
-        </div>
-
-        <div class="grid">
-            <div class="input-textarea">
-                <label for="descricao">Descrição:</label>
-                <textarea id="descricao" name="descricao" rows="10" cols="63"></textarea>
-            </div>
-        </div>
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="unidade">Unidade:*</label>
+                        <input type="text" name="unidade" id="unidade">
+                    </div>
+                </div>
         
-        <button id="botao-salvar" type="submit">Salvar</button>
+                <div class="grid">
+                    <div class="input-completo">
+                        <label for="categoria">Categoria:*</label>
+                        <select name="categoria">
+                            <option value="vazio">...</option>
+                            <option value="1">Categoria 1</option>
+                            <option value="2">Categoria 2</option>
+                            <option value="3">Categoria 3</option>
+                        </select>  
+                    </div>
+                </div>
+        
+                <div class="grid">
+                    <div class="input-textarea">
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" name="descricao" rows="4"></textarea>
+                    </div>
+                </div>
+                
+                <button id="botao-salvar" type="submit">Salvar</button>
+            
+            </form>
+        </div>
     </div>
     
 </body>
