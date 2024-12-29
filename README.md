@@ -1,4 +1,4 @@
-# [Interface - Controle de Estoque](https://emersonviniciusbraga.github.io/Controle-de-Estoque---Loja/dashboard.html)
+# [Interface - Controle de Estoque](https://emersubraga.github.io/Controle-de-Estoque---Loja/dashboard.html)
 
 <p style="text-align: justify;">
 Esse projeto foi desenvolvido na matéria de Projeto Integrador I. A ideia era desenvolver um sistema de controle de estoque de uma loja de mateiais de construção.</p>
